@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <!--boxicons cdn links-->
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+    <title>dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxs-bank' ></i>
+            <span class="logo-name">E-lending</span><i class='bx bx-menu'></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="">
+                <i class='bx bxs-dashboard'></i>
+                <span class="link-name">Dashboard</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link-name" href="">Dashboard</a></li>
+            </ul></li>
+
+            <li>
+                <div class="icon-link">
+                    <a href="">
+                        <i class='bx bx-collection'></i>
+                        <span class="link-name">Category</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="">Category</a></li>
+                    <li><a href="">Quick loans</a></li>
+                    <li><a href="">Business loans</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <div class="icon-link">
+                    <a href="">
+                        <i class='bx bx-book-alt'></i>
+                        <span class="link-name">Loans</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="">Loan Properties</a></li>
+                    <li><a href="">Loan History</a></li>
+                    <li><a href="">Pending loans</a></li>
+                    <li><a href="">Download statement</a></li>
+                </ul>
+            </li>
+            <li><a href="">
+                <i class='bx bxs-user-account'></i>
+                <span class="link-name">Clients</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link-name" href="">Clients</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="icon-link">
+                <a href="">
+                    <i class='bx bxs-user-circle' ></i>
+                    <span class="link-name">Interests</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link-name" href="">Interests</a></li>
+                <li><a href="">annual Interests</a></li>
+                <li><a href="">monthly Interests</a></li>
+                <li><a href="">Weekly daily</a></li>
+            </ul>
+        </li>
+        <li><a href="">
+            <i class='bx bx-grid-alt'></i>
+            <span class="link-name">Payments</span>
+        </a>
+        <ul class="sub-menu blank">
+            <li><a class="link-name" href="">Payments</a></li>
+        </ul>
+    </li>
+
+    <li><a href="">
+        <i class='bx bx-pie-chart-alt-2'></i>
+        <span class="link-name">Analytics</span>
+    </a>
+    <ul class="sub-menu blank">
+        <li><a class="link-name" href="">Analytics</a></li>
+    </ul>
+</li>
+    <li><a href="">
+        <i class='bx bxs-cog' ></i>
+        <span class="link-name">Settings</span>
+    </a>
+    <ul class="sub-menu blank">
+        <li><a class="link-name" href="">Settings</a></li>
+    </ul>
+</li>
+        </ul>
+    </div>
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        
+        for(var i=0; i < arrow.length; i++){
+            arrow[i].addEventListener("click",(e)=>{
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+</html>
